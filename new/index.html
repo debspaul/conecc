@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrecastPro - Advanced Concrete Systems</title>
+  <meta name="description" content="Discover the most advanced precast concrete wall systems engineered for performance, designed for durability. Explore our range of precast solutions.">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="PrecastPro - Advanced Concrete Systems">
+  <meta property="og:description" content="Discover the most advanced precast concrete wall systems engineered for performance, designed for durability.">
+  <meta property="og:type" content="website">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: 'hsl(195, 84%, 25%)',
+              light: 'hsl(195, 70%, 35%)',
+              dark: 'hsl(195, 84%, 20%)',
+            },
+            secondary: {
+              DEFAULT: 'hsl(27, 89%, 57%)',
+              light: 'hsl(27, 100%, 67%)',
+              dark: 'hsl(27, 80%, 47%)',
+            },
+            neutral: {
+              light: 'hsl(0, 0%, 96%)',
+              medium: 'hsl(0, 0%, 88%)',
+              dark: 'hsl(0, 0%, 20%)',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            body: ['Roboto', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .bg-concrete-texture {
+      background-color: #f9f9f9;
+      background-image: url('https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?q=80&w=2069&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .shadow-sharp {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section-divider {
+      position: relative;
+      height: 4px;
+      background: linear-gradient(90deg, hsl(195, 84%, 25%) 0%, hsl(27, 89%, 57%) 100%);
+      margin: 2rem 0;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .gallery-image {
+      transition: all 0.3s ease;
+    }
+    
+    .gallery-image:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <div class="text-primary font-bold text-xl md:text-2xl mr-2">PRECAST</div>
+          <div class="hidden md:block h-6 w-px bg-gray-300 mx-3"></div>
+          <div class="hidden md:block text-sm text-gray-600">ADVANCED CONCRETE SYSTEMS</div>
+        </div>
+        
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="#solutions" class="text-gray-700 hover:text-primary">Solutions</a>
+          <a href="#advantages" class="text-gray-700 hover:text-primary">Advantages</a>
+          <a href="#products" class="text-gray-700 hover:text-primary">Products</a>
+          <a href="#security" class="text-gray-700 hover:text-primary">Security</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+        </nav>
+        
+        <div class="md:hidden flex items-center">
+          <button 
+            class="text-gray-500 focus:outline-none menu-toggle" 
+            aria-label="Toggle menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div class="md:hidden mt-4 pb-2 mobile-menu hidden">
+        <nav class="flex flex-col space-y-3 text-sm font-medium">
+          <a href="#solutions" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">Solutions</a>
+          <a href="#advantages" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">Advantages</a>
+          <a href="#products" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">Products</a>
+          <a href="#security" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">Security</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary py-2">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-neutral-dark text-white">
+      <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+          class="object-cover w-full h-full" 
+          alt="Modern precast concrete building" 
+        />
+      </div>
+      
+      <div class="container mx-auto px-4 py-24 md:py-32 relative z-20">
+        <div class="max-w-3xl">
+          <h1 class="text-3xl md:text-5xl font-bold font-sans mb-4">THE MOST ADVANCED PRECAST CONCRETE SYSTEM</h1>
+          <p class="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl">Engineered for performance, designed for durability, secured for enterprise.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#products" class="bg-secondary hover:bg-secondary-dark text-white py-3 px-6 rounded-md font-medium text-center">
+              Explore Products
+            </a>
+            <a href="#contact" class="bg-white hover:bg-gray-100 text-primary py-3 px-6 rounded-md font-medium text-center">
+              Request Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold font-sans text-gray-800 mb-4">Comprehensive Precast Solutions</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Our advanced precast concrete systems offer unmatched quality, efficiency, and versatility for modern construction requirements.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-neutral-light rounded-lg p-6 shadow-sharp hover:shadow-lg transition-all">
+            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+              <svg class="text-white text-xl" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Commercial Structures</h3>
+            <p class="text-gray-600 mb-4">High-performance precast solutions for office buildings, retail centers, and industrial facilities.</p>
+            <ul class="text-sm text-gray-700 space-y-2">
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>Accelerated construction timelines</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>Superior thermal performance</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>Design flexibility and aesthetics</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-neutral-light rounded-lg p-6 shadow-sharp hover:shadow-lg transition-all">
+            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+              <svg class="text-white text-xl" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Industrial Applications</h3>
+            <p class="text-gray-600 mb-4">Robust precast systems designed for warehouses, manufacturing plants, and logistics centers.</p>
+            <ul class="text-sm text-gray-700 space-y-2">
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>High durability in harsh environments</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>Enhanced fire resistance ratings</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>Load-bearing capabilities</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-neutral-light rounded-lg p-6 shadow-sharp hover:shadow-lg transition-all">
+            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+              <svg class="text-white text-xl" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Secure Facilities</h3>
+            <p class="text-gray-600 mb-4">Specialized precast solutions for data centers, government buildings, and critical infrastructure.</p>
+            <ul class="text-sm text-gray-700 space-y-2">
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>Blast and impact resistance</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>SCIF-compliant construction</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-secondary mr-2">✓</span>
+                <span>EMI/RFI shielding capabilities</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-16 text-gray-800 relative">
+      <!-- Background image for the section -->
+      <div class="absolute inset-0 bg-gray-100 overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1581094481805-31e2fb28238b?q=80&w=2070&auto=format&fit=crop" 
+          alt="Concrete construction background" 
+          class="w-full h-full object-cover opacity-15"
+        >
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-bold font-sans mb-8 text-center text-gray-800">The Precast Advantage</h2>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4 flex items-center text-gray-800">
+                <span class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <svg class="text-white text-sm" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </span>
+                Accelerated Construction
+              </h3>
+              <p class="text-gray-700 mb-6">Reduce construction time by up to 50% compared to conventional methods, allowing faster occupancy and return on investment.</p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 flex items-center text-gray-800">
+                <span class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <svg class="text-white text-sm" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                </span>
+                Sustainability
+              </h3>
+              <p class="text-gray-700 mb-6">Our precast systems provide superior thermal performance, reducing energy consumption and contributing to LEED certification goals.</p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 flex items-center text-gray-800">
+                <span class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <svg class="text-white text-sm" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="21" x2="4" y2="14"></line>
+                    <line x1="4" y1="10" x2="4" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12" y2="3"></line>
+                    <line x1="20" y1="21" x2="20" y2="16"></line>
+                    <line x1="20" y1="12" x2="20" y2="3"></line>
+                    <line x1="1" y1="14" x2="7" y2="14"></line>
+                    <line x1="9" y1="8" x2="15" y2="8"></line>
+                    <line x1="17" y1="16" x2="23" y2="16"></line>
+                  </svg>
+                </span>
+                Design Flexibility
+              </h3>
+              <p class="text-gray-700">Unlimited architectural expressions with various textures, colors, and finishes to meet your aesthetic and functional requirements.</p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 flex items-center text-gray-800">
+                <span class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                  <svg class="text-white text-sm" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                </span>
+                Lifecycle Value
+              </h3>
+              <p class="text-gray-700">Lower maintenance costs, extended service life, and superior durability provide exceptional long-term return on investment.</p>
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div class="mb-4 md:mb-0">
+                <p class="text-xl font-semibold text-gray-800">Ready to experience the difference?</p>
+                <p class="text-gray-600">Our experts will help you choose the ideal precast solution.</p>
+              </div>
+              <a href="#contact" class="bg-secondary hover:bg-secondary-dark text-white py-3 px-6 rounded-md font-medium text-center whitespace-nowrap">
+                Get Started Today
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold font-sans text-gray-800 mb-4">Precast Wall Systems</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Our comprehensive range of precast wall systems provides solutions for any construction challenge.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 products-container">
+          <!-- Products will be loaded dynamically via JavaScript -->
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="#contact" class="bg-secondary hover:bg-secondary-dark text-white py-3 px-8 rounded-md font-medium transition-all inline-block">
+            Request Custom Specifications
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-neutral-medium">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold font-sans text-gray-800 mb-4">Project Gallery</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            See our precast concrete systems in action across diverse applications and environments.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gallery-container">
+          <!-- Gallery images will be loaded dynamically via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Section -->
+    <section id="security" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold font-sans text-gray-800 mb-4">Enterprise Security Features</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Our systems integrate advanced security measures to protect your data and physical infrastructure.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-5xl mx-auto">
+          <div class="bg-neutral-light p-6 rounded-lg shadow-sharp">
+            <div class="flex items-start">
+              <div class="bg-primary rounded-full p-3 mr-4">
+                <svg class="text-white text-xl" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                  <polyline points="10 17 15 12 10 7"></polyline>
+                  <line x1="15" y1="12" x2="3" y2="12"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Single Sign-On Integration</h3>
+                <p class="text-gray-600">Secure authentication through enterprise identity providers including:</p>
+                <ul class="mt-3 space-y-2 text-gray-700">
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>SAML 2.0 compliant authentication</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Integration with Azure AD, Okta, and Google Workspace</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Multi-factor authentication support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-neutral-light p-6 rounded-lg shadow-sharp">
+            <div class="flex items-start">
+              <div class="bg-primary rounded-full p-3 mr-4">
+                <svg class="text-white text-xl" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Data Protection</h3>
+                <p class="text-gray-600">Enterprise-grade security for your sensitive construction data:</p>
+                <ul class="mt-3 space-y-2 text-gray-700">
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>End-to-end encryption for all communications</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>GDPR and CCPA compliant data handling</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Secure file sharing with expiration controls</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-neutral-light p-6 rounded-lg shadow-sharp">
+            <div class="flex items-start">
+              <div class="bg-primary rounded-full p-3 mr-4">
+                <svg class="text-white text-xl" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Role-Based Access Control</h3>
+                <p class="text-gray-600">Granular permissions for your team and partners:</p>
+                <ul class="mt-3 space-y-2 text-gray-700">
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Custom role definitions for stakeholders</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Project-specific access restrictions</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Audit logging of all access events</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-neutral-light p-6 rounded-lg shadow-sharp">
+            <div class="flex items-start">
+              <div class="bg-primary rounded-full p-3 mr-4">
+                <svg class="text-white text-xl" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Physical Security Integration</h3>
+                <p class="text-gray-600">Connect digital and physical security systems:</p>
+                <ul class="mt-3 space-y-2 text-gray-700">
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Building access control integration</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Security camera and sensor feeds</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary mr-2">✓</span>
+                    <span>Emergency response system connections</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="#contact" class="bg-primary hover:bg-primary-dark text-white py-3 px-8 rounded-md font-medium transition-all inline-block">
+            Request Security Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold font-sans mb-6">Ready to Transform Your Construction Process?</h2>
+          <p class="text-xl mb-8">
+            Our advanced precast concrete systems deliver unmatched efficiency, quality, and security for modern construction requirements.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#contact" class="bg-white hover:bg-gray-100 text-primary py-3 px-8 rounded-md font-medium transition-all inline-block">
+              Contact Our Experts
+            </a>
+            <a href="#products" class="bg-secondary hover:bg-secondary-dark text-white py-3 px-8 rounded-md font-medium transition-all inline-block">
+              Explore Products
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h2 class="text-3xl font-bold font-sans text-gray-800 mb-4">Get In Touch</h2>
+              <p class="text-gray-600 mb-6">
+                Have questions about our precast concrete systems? Contact our experts for personalized assistance.
+              </p>
+              
+              <form id="contactForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                    <input 
+                      type="text" 
+                      id="firstName" 
+                      name="firstName" 
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      required
+                    />
+                    <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                  </div>
+                  <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                    <input 
+                      type="text" 
+                      id="lastName" 
+                      name="lastName" 
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      required
+                    />
+                    <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  />
+                  <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                </div>
+                
+                <div>
+                  <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                  <input 
+                    type="text" 
+                    id="company" 
+                    name="company" 
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                </div>
+                
+                <div>
+                  <label for="projectType" class="block text-sm font-medium text-gray-700 mb-1">Project Type *</label>
+                  <select
+                    id="projectType"
+                    name="projectType"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  >
+                    <option value="">Select a project type</option>
+                    <option value="commercial">Commercial Building</option>
+                    <option value="industrial">Industrial Facility</option>
+                    <option value="institutional">Institutional/Government</option>
+                    <option value="residential">Multi-Family Residential</option>
+                    <option value="datacenter">Data Center</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                </div>
+                
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  ></textarea>
+                  <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                </div>
+                
+                <div class="flex flex-row items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    id="consent"
+                    name="consent"
+                    class="mt-1"
+                    required
+                  />
+                  <div>
+                    <label for="consent" class="text-sm text-gray-700">
+                      I consent to having my information processed to receive responses to my inquiries. *
+                    </label>
+                    <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                  </div>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  class="w-full bg-secondary hover:bg-secondary-dark text-white py-3 px-6 rounded-md font-medium transition-colors"
+                >
+                  Submit Request
+                </button>
+              </form>
+            </div>
+            
+            <div class="flex flex-col justify-between h-full">
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Our Locations</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="bg-white shadow-md p-5 rounded-lg border border-gray-200">
+                    <h4 class="font-semibold mb-2">Corporate Headquarters</h4>
+                    <p class="text-gray-600 mb-4">
+                      123 Concrete Way<br />
+                      Chicago, IL 60601<br />
+                      United States
+                    </p>
+                    <div class="text-gray-700">
+                      <p class="flex items-center mb-2">
+                        <svg class="text-primary mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        +1 (312) 555-7890
+                      </p>
+                      <p class="flex items-center">
+                        <svg class="text-primary mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                          <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        info@precastsystems.com
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="bg-white shadow-md p-5 rounded-lg border border-gray-200">
+                    <h4 class="font-semibold mb-2">West Coast Office</h4>
+                    <p class="text-gray-600 mb-4">
+                      456 Industrial Blvd<br />
+                      Seattle, WA 98101<br />
+                      United States
+                    </p>
+                    <div class="text-gray-700">
+                      <p class="flex items-center mb-2">
+                        <svg class="text-primary mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        +1 (206) 555-4321
+                      </p>
+                      <p class="flex items-center">
+                        <svg class="text-primary mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                          <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        westcoast@precastsystems.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-8 bg-primary p-6 rounded-lg shadow-md text-white">
+                <h3 class="text-xl font-semibold mb-4">Enterprise Support</h3>
+                <p class="mb-4">Dedicated support for our enterprise clients with priority response times.</p>
+                <p class="flex items-center mb-3">
+                  <svg class="mr-3 text-white h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                  </svg>
+                  <span>24/7 Priority Support</span>
+                </p>
+                <p class="flex items-center">
+                  <svg class="mr-3 text-white h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>enterprise@precastsystems.com</span>
+                </p>
+                <div class="mt-4 pt-4 border-t border-blue-400">
+                  <a 
+                    href="mailto:enterprise@precastsystems.com?subject=Enterprise%20Support%20Request"
+                    class="inline-flex items-center text-white hover:text-secondary font-medium"
+                  >
+                    Request Enterprise Support
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">PRECAST</h3>
+          <p class="text-gray-300 mb-4">
+            The most advanced precast concrete systems for modern construction requirements.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Solutions</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#solutions" class="hover:text-primary transition-colors">Commercial Buildings</a></li>
+            <li><a href="#solutions" class="hover:text-primary transition-colors">Industrial Facilities</a></li>
+            <li><a href="#solutions" class="hover:text-primary transition-colors">Data Centers</a></li>
+            <li><a href="#solutions" class="hover:text-primary transition-colors">Government Facilities</a></li>
+            <li><a href="#solutions" class="hover:text-primary transition-colors">Educational Institutions</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#products" class="hover:text-primary transition-colors">Technical Specifications</a></li>
+            <li><a href="#products" class="hover:text-primary transition-colors">BIM Models</a></li>
+            <li><a href="#products" class="hover:text-primary transition-colors">Case Studies</a></li>
+            <li><a href="#products" class="hover:text-primary transition-colors">White Papers</a></li>
+            <li><a href="#products" class="hover:text-primary transition-colors">Certifications</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Company</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#" class="hover:text-primary transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Leadership</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">News & Events</a></li>
+            <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-12 pt-8 border-t border-gray-700">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            &copy; <span id="currentYear"></span> Advanced Precast Concrete Systems. All rights reserved.
+          </p>
+          <div class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm text-gray-400">
+            <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+            <a href="#" class="hover:text-primary transition-colors">Cookie Policy</a>
+            <a href="#" class="hover:text-primary transition-colors">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Modal -->
+  <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 id="modalTitle" class="text-2xl font-semibold"></h3>
+          <button id="closeModal" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <p id="modalDescription" class="text-gray-600 mb-6"></p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <img 
+              id="modalImage" 
+              src="" 
+              alt="" 
+              class="w-full h-64 object-cover rounded-md" 
+            />
+            
+            <div class="mt-4 bg-neutral-light p-4 rounded-md">
+              <h4 class="text-sm font-semibold text-primary mb-3">Technical Specifications</h4>
+              <ul id="modalSpecs" class="text-sm font-mono text-gray-700 space-y-2">
+                <!-- Specs will be populated dynamically -->
+              </ul>
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-3">Additional Details</h4>
+            <div class="space-y-4">
+              <div>
+                <h5 class="text-sm font-semibold text-primary">Installation Process</h5>
+                <p class="text-sm text-gray-600">Factory-fabricated panels are delivered to the site ready for installation, with all necessary connections pre-engineered for maximum efficiency.</p>
+              </div>
+              <div>
+                <h5 class="text-sm font-semibold text-primary">Quality Control</h5>
+                <p class="text-sm text-gray-600">All panels undergo rigorous quality control in a controlled environment, ensuring consistent performance and appearance.</p>
+              </div>
+              <div>
+                <h5 class="text-sm font-semibold text-primary">Customization Options</h5>
+                <p class="text-sm text-gray-600">Available with various finishes, textures, colors, and insulation values to meet specific project requirements.</p>
+              </div>
+              <div>
+                <h5 class="text-sm font-semibold text-primary">Sustainability Features</h5>
+                <p class="text-sm text-gray-600">Reduced material waste, lower energy consumption, and recycled content options contribute to LEED certification goals.</p>
+              </div>
+            </div>
+            
+            <div class="mt-6 bg-primary/10 p-4 rounded-md">
+              <h4 class="text-sm font-semibold text-primary mb-2">Applications</h4>
+              <p class="text-sm text-gray-600">
+                Ideal for commercial, industrial, institutional, and critical infrastructure projects requiring high performance, durability, and accelerated construction schedules.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-6 border-t border-gray-200 flex flex-col sm:flex-row gap-2 sm:justify-between sm:items-center">
+          <button 
+            id="closeModalBtn"
+            class="py-2 px-4 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+          >
+            Close
+          </button>
+          <div class="flex gap-2">
+            <a 
+              href="#contact"
+              class="py-2 px-4 bg-secondary text-white rounded-md hover:bg-secondary-dark"
+              id="requestQuoteBtn"
+            >
+              Request Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-md shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+    <p id="toastMessage"></p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Product data
+    const products = [
+      {
+        id: 1,
+        title: "Structural Insulated Panels",
+        description: "High-performance insulated panels offering superior thermal efficiency and structural integrity.",
+        image: "https://images.unsplash.com/photo-1621230383916-09c18e4c7bdb?q=80&w=2070&auto=format&fit=crop",
+        specs: [
+          { label: "R-Value", value: "R-20 to R-40" },
+          { label: "Thickness", value: "6\" - 12\"" },
+          { label: "Fire Rating", value: "Up to 4 hours" },
+          { label: "STC Rating", value: "50-55" }
+        ]
+      },
+      {
+        id: 2,
+        title: "Architectural Wall Panels",
+        description: "Decorative panels with unlimited aesthetic options and premium finish quality.",
+        image: "https://images.unsplash.com/photo-1572883475077-5f6344a83cce?q=80&w=2071&auto=format&fit=crop",
+        specs: [
+          { label: "Finishes", value: "Multiple options" },
+          { label: "Thickness", value: "5\" - 8\"" },
+          { label: "Fire Rating", value: "Up to 3 hours" },
+          { label: "Wind Load", value: "140+ mph" }
+        ]
+      },
+      {
+        id: 3,
+        title: "Security Wall Systems",
+        description: "Blast-resistant and highly secure wall systems for sensitive and critical facilities.",
+        image: "https://images.unsplash.com/photo-1518005068251-37900150dfca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        specs: [
+          { label: "Blast Rating", value: "Level III-V" },
+          { label: "Thickness", value: "8\" - 14\"" },
+          { label: "Ballistic", value: "UL 752 Level 8" },
+          { label: "EMI Shield", value: "Available" }
+        ]
+      },
+      {
+        id: 4,
+        title: "Foundation Wall Systems",
+        description: "Superior foundational support with faster installation and high load-bearing capacity.",
+        image: "https://images.unsplash.com/photo-1579746705699-4f7db4d6940a?q=80&w=2070&auto=format&fit=crop",
+        specs: [
+          { label: "Load Capacity", value: "40,000+ lbs/ft" },
+          { label: "Thickness", value: "8\" - 12\"" },
+          { label: "Waterproofing", value: "Integrated" },
+          { label: "Insulation", value: "Optional" }
+        ]
+      },
+      {
+        id: 5,
+        title: "Modular Wall Systems",
+        description: "Versatile, pre-finished wall solutions with rapid assembly and minimal site disruption.",
+        image: "https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        specs: [
+          { label: "Installation", value: "1-3 days" },
+          { label: "Thickness", value: "4\" - 8\"" },
+          { label: "Configuration", value: "Customizable" },
+          { label: "Relocatable", value: "Yes" }
+        ]
+      },
+      {
+        id: 6,
+        title: "Acoustic Wall Panels",
+        description: "Specialized sound-controlling panels for theaters, studios, and noise-sensitive environments.",
+        image: "https://images.unsplash.com/photo-1582461683183-2ceccbbe0780?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        specs: [
+          { label: "STC Rating", value: "55-65" },
+          { label: "Thickness", value: "6\" - 10\"" },
+          { label: "NRC", value: "0.70-0.95" },
+          { label: "Patterns", value: "Multiple" }
+        ]
+      }
+    ];
+
+    // Gallery images
+    const galleryImages = [
+      {
+        src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        alt: "Modern office building with precast facade"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1477121416383-b536f67ffa48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        alt: "Textured concrete wall panel"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        alt: "Industrial facility with precast walls"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1605795173463-5f36c9466e7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        alt: "Modern architectural concrete detail"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?q=80&w=2076&auto=format&fit=crop",
+        alt: "Commercial building under construction"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        alt: "Decorative precast concrete wall"
+      }
+    ];
+
+    $(document).ready(function() {
+      // Current year for footer
+      $('#currentYear').text(new Date().getFullYear());
+
+      // Mobile menu toggle
+      $('.menu-toggle').click(function() {
+        $('.mobile-menu').toggleClass('hidden');
+        $('.menu-icon').toggleClass('hidden');
+        $('.close-icon').toggleClass('hidden');
+      });
+
+      // Close mobile menu when clicking on a link
+      $('.mobile-menu a').click(function() {
+        $('.mobile-menu').addClass('hidden');
+        $('.menu-icon').removeClass('hidden');
+        $('.close-icon').addClass('hidden');
+      });
+
+      // Smooth scrolling for all anchor links
+      $('a[href^="#"]').on('click', function(e) {
+        if(this.hash !== '') {
+          e.preventDefault();
+          const hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top - 80
+          }, 800);
+        }
+      });
+
+      // Render products
+      renderProducts();
+      
+      // Render gallery
+      renderGallery();
+
+      // Product modal functionality
+      setupProductModal();
+
+      // Form submission
+      $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Validate form
+        if(validateForm()) {
+          // In a real application, you would send the form data to a server
+          // For demonstration, we'll just show a success message
+          showToast('Your message has been sent successfully!');
+          
+          // Reset form
+          this.reset();
+        }
+      });
+    });
+
+    function renderProducts() {
+      const container = $('.products-container');
+      
+      products.forEach(product => {
+        const card = `
+          <div class="bg-neutral-light rounded-lg overflow-hidden shadow-sharp hover:shadow-lg transition-all product-card">
+            <img 
+              src="${product.image}" 
+              class="w-full h-48 object-cover" 
+              alt="${product.title}" 
+            />
+            
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">${product.title}</h3>
+              <p class="text-gray-600 mb-4">${product.description}</p>
+              
+              <div class="bg-white p-4 rounded-md mb-4">
+                <h4 class="text-sm font-semibold text-primary mb-3">Technical Specifications</h4>
+                <ul class="text-sm font-mono text-gray-700 space-y-2">
+                  ${product.specs.map(spec => `
+                    <li class="flex justify-between">
+                      <span>${spec.label}:</span>
+                      <span>${spec.value}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+              
+              <button 
+                class="view-product w-full bg-primary hover:bg-primary-dark text-white py-2 rounded text-sm transition-all"
+                data-id="${product.id}"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        `;
+        
+        container.append(card);
+      });
+    }
+
+    function renderGallery() {
+      const container = $('.gallery-container');
+      
+      galleryImages.forEach(image => {
+        const galleryItem = `
+          <div class="overflow-hidden rounded-lg shadow-sharp gallery-image">
+            <img 
+              src="${image.src}" 
+              class="w-full h-64 object-cover" 
+              alt="${image.alt}" 
+            />
+          </div>
+        `;
+        
+        container.append(galleryItem);
+      });
+    }
+
+    function setupProductModal() {
+      // Open modal when View Details button is clicked
+      $(document).on('click', '.view-product', function() {
+        const productId = $(this).data('id');
+        const product = products.find(p => p.id === productId);
+        
+        if (product) {
+          // Populate modal
+          $('#modalTitle').text(product.title);
+          $('#modalDescription').text(product.description);
+          $('#modalImage').attr('src', product.image).attr('alt', product.title);
+          
+          // Populate specs
+          const specsList = $('#modalSpecs');
+          specsList.empty();
+          product.specs.forEach(spec => {
+            specsList.append(`
+              <li class="flex justify-between">
+                <span>${spec.label}:</span>
+                <span>${spec.value}</span>
+              </li>
+            `);
+          });
+          
+          // Show modal
+          $('#productModal').removeClass('hidden');
+          
+          // Prevent scrolling on the body
+          $('body').css('overflow', 'hidden');
+        }
+      });
+      
+      // Close modal
+      $('#closeModal, #closeModalBtn').click(function() {
+        $('#productModal').addClass('hidden');
+        $('body').css('overflow', 'auto');
+      });
+      
+      // Close modal when clicking outside
+      $('#productModal').click(function(e) {
+        if (e.target === this) {
+          $(this).addClass('hidden');
+          $('body').css('overflow', 'auto');
+        }
+      });
+      
+      // Prevent closing when clicking inside the modal content
+      $('#productModal > div').click(function(e) {
+        e.stopPropagation();
+      });
+      
+      // Request quote button
+      $('#requestQuoteBtn').click(function() {
+        $('#productModal').addClass('hidden');
+        $('body').css('overflow', 'auto');
+      });
+    }
+
+    function validateForm() {
+      let isValid = true;
+      
+      // Reset previous error messages
+      $('.error-message').addClass('hidden').text('');
+      
+      // Required fields validation
+      const requiredFields = ['firstName', 'lastName', 'email', 'projectType', 'message'];
+      
+      requiredFields.forEach(field => {
+        const value = $(`#${field}`).val();
+        if (!value || value.trim() === '') {
+          showError(field, 'This field is required');
+          isValid = false;
+        }
+      });
+      
+      // Email validation
+      const email = $('#email').val();
+      if (email && !isValidEmail(email)) {
+        showError('email', 'Please enter a valid email address');
+        isValid = false;
+      }
+      
+      // Consent checkbox validation
+      if (!$('#consent').is(':checked')) {
+        showError('consent', 'You must consent to proceed');
+        isValid = false;
+      }
+      
+      return isValid;
+    }
+
+    function showError(fieldId, message) {
+      $(`#${fieldId}`).addClass('border-red-500');
+      $(`#${fieldId}`).next('.error-message').removeClass('hidden').text(message);
+    }
+
+    function isValidEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
+    function showToast(message) {
+      $('#toastMessage').text(message);
+      $('#toast').removeClass('translate-y-20 opacity-0').addClass('translate-y-0 opacity-100');
+      
+      setTimeout(() => {
+        $('#toast').removeClass('translate-y-0 opacity-100').addClass('translate-y-20 opacity-0');
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

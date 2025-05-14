@@ -1,0 +1,164 @@
+/* Custom styles for PrecastPro */
+
+/* Base styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utilities */
+.opacity-15 {
+  opacity: 0.15;
+}
+
+/* Colors */
+:root {
+  --primary: hsl(195, 84%, 25%);
+  --primary-light: hsl(195, 70%, 35%);
+  --primary-dark: hsl(195, 84%, 20%);
+  --secondary: hsl(27, 89%, 57%);
+  --secondary-light: hsl(27, 100%, 67%);
+  --secondary-dark: hsl(27, 80%, 47%);
+  --neutral-light: hsl(0, 0%, 96%);
+  --neutral-medium: hsl(0, 0%, 88%);
+  --neutral-dark: hsl(0, 0%, 20%);
+}
+
+/* Background and effects */
+.bg-concrete-texture {
+  background-color: #f9f9f9;
+  background-image: url('https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?q=80&w=2069&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.shadow-sharp {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.section-divider {
+  position: relative;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  margin: 2rem 0;
+}
+
+/* Animation effects */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-image {
+  transition: all 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #10B981;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toast.hidden {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* Form styles */
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.375rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(0, 159, 220, 0.2);
+}
+
+.form-input.error {
+  border-color: #EF4444;
+}
+
+.error-message {
+  font-size: 0.875rem;
+  color: #EF4444;
+  margin-top: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    font-size: 12pt;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+}
