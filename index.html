@@ -19,7 +19,9 @@
     <!-- *********************************************** HEADER *********************************************** -->
     <header class="bg-light shadow-sm">
         <nav class="navbar navbar-expand-lg navbar-light container">
-            <a class="navbar-brand" href="#">New Age Engineering Solutions LLP</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/images/logo.jpg" alt="New Age Engineering Solutions LLP Logo" style="height: 48px; width: auto;" class="me-2">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,7 +55,7 @@
         <!-- Video Banner -->
         <section class="video-banner">
             <video width="640" height="360" muted autoplay controls>
-                <source src="assets/videos/hero.mp4" type="video/mp4">
+                <source src="assets/videos/BANNER-CLIP.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="overlay"></div>
@@ -68,9 +70,14 @@
         <section class="about-section bg-light">
             <div class="container">
                 <div class="row align-items-center">
-                    <!-- Image Column -->
+                    <!-- Video Thumbnail Column -->
                     <div class="col-lg-4 mb-4 mb-lg-0">
-                        <img src="assets/images/hero.jpeg" alt="About Us Image">
+                        <div class="about-video-thumbnail position-relative" style="cursor:pointer;" id="aboutVideoThumbnail">
+                            <img src="assets/images/hero.jpeg" alt="About Video Thumbnail" class="img-fluid rounded">
+                            <span class="position-absolute top-50 start-50 translate-middle" style="font-size:3rem; color:white; text-shadow:0 0 10px #000; pointer-events:none;">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </span>
+                        </div>
                     </div>
                     <!-- Text Column -->
                     <div class="col-lg-8">
@@ -86,7 +93,22 @@
             </div>
         </section>
 
-
+        <!-- About Video Modal -->
+        <div class="modal fade" id="aboutVideoModal" tabindex="-1" aria-labelledby="aboutVideoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <video id="aboutVideo" width="100%" controls>
+                            <source src="assets/videos/ABOUT.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="section precastWallSection">
             <div class="container">
@@ -102,13 +124,13 @@
         <section class="imageGrid">
             <div class="images">
                 <div class="image">
-                    <img src="assets/images/precast-wall-1.jpg" alt="Precast Wall 1">
+                    <img src="assets/images/precast-wall-11.jpg" alt="Precast Wall 1">
                 </div>
                 <div class="image">
-                    <img src="assets/images/precast-wall-2.jpg" alt="Precast Wall 2">
+                    <img src="assets/images/precast-wall-22.jpg" alt="Precast Wall 2">
                 </div>
                 <div class="image">
-                    <img src="assets/images/precast-wall-3.jpg" alt="Precast Wall 3">
+                    <img src="assets/images/precast-wall-33.jpg" alt="Precast Wall 3">
                 </div>
             </div>
         </section>
@@ -241,5 +263,28 @@
     </footer>
     <!-- *********************************************** /FOOTER *********************************************** -->
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var aboutVideoModal = document.getElementById('aboutVideoModal');
+        var aboutVideo = document.getElementById('aboutVideo');
+        var aboutVideoThumbnail = document.getElementById('aboutVideoThumbnail');
+        if (aboutVideoThumbnail) {
+            aboutVideoThumbnail.addEventListener('click', function() {
+                var modal = new bootstrap.Modal(aboutVideoModal);
+                modal.show();
+            });
+        }
+        if (aboutVideoModal) {
+            aboutVideoModal.addEventListener('shown.bs.modal', function () {
+                aboutVideo.currentTime = 0;
+                aboutVideo.play();
+            });
+            aboutVideoModal.addEventListener('hidden.bs.modal', function () {
+                aboutVideo.pause();
+                aboutVideo.currentTime = 0;
+            });
+        }
+    });
+    </script>
 </body>
 </html>

@@ -61,7 +61,7 @@
 
 
 .precastWallSection {
-    background-image: url('assets/images/bg.jpg');
+    background-image: url('assets/images/bg-1.JPG');
     padding: 120px 0;
     background-size: cover;
     background-position: center;
@@ -175,6 +175,14 @@
 
 
 
+
+header.bg-light {
+    background-color: #fff !important;
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    /* Ensures header stays above other content */
+}
 
 .manufacturer-section {
     background: linear-gradient(135deg, #e9f1ff, #ffffff);
