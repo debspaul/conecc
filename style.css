@@ -35,12 +35,22 @@
     z-index: 2;
 }
 .video-banner .content {
-    position: relative;
+    /* position: relative;
     z-index: 3;
     color: white;
     text-align: center;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    transform: unset;
+    top: unset;
+    text-align: left;
+    background: #d40000;
+    color: #fff;
+    padding: 30px;
 }
 
 
