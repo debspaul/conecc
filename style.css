@@ -9,12 +9,12 @@
 }
 
 .video-banner {
-    position: relative;
+    /* position: relative;
     overflow: hidden;
-    height: 80vh; /* Adjust the banner height */
+    height: 80vh; Adjust the banner height */
 }
 .video-banner video {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -23,7 +23,10 @@
     height: auto;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    z-index: 1;
+    z-index: 1; */
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
 }
 .video-banner .overlay {
     position: absolute;
@@ -41,13 +44,15 @@
     text-align: center;
     top: 50%;
     transform: translateY(-50%); */
-    position: absolute;
+    /* position: absolute;
     left: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 3; */
+    position: relative;
     transform: unset;
-    top: unset;
-    text-align: left;
+    /* top: unset; */
+    top: -5px;
+    text-align: center;
     background: #d40000;
     color: #fff;
     padding: 30px;
@@ -62,6 +67,13 @@
     border-radius: 8px;
     object-fit: cover;
     height: 450px;
+}
+
+@media (max-width: 768px) {
+    .about-section .underline {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .underline {
