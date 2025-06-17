@@ -14,6 +14,15 @@
 
 
     <link rel="stylesheet" href="style.css">
+
+
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    (function () {
+        emailjs.init("YOUR_PUBLIC_KEY"); // replace with your EmailJS Public Key
+    })();
+    </script>
 </head>
 <body>
     <!-- *********************************************** HEADER *********************************************** -->
@@ -380,23 +389,58 @@
                         <div class="col-lg-12">
                             <div class="contact-form-box p-4">
                                 <h2 class="form-title mb-4 text-center text-uppercase fw-bold">Have a question? Let's talk!</h2>
-                                <form>
+                                <!-- <form action="https://formspree.io/f/xyzjwody" method="POST">
                                     <div class="row g-3 mb-3">
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control contact-input" placeholder="Name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control contact-input" placeholder="Phone">
-                                    </div>
-                                    </div>
-                                    <div class="mb-3">
-                                    <input type="email" class="form-control contact-input" placeholder="Email">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control contact-input" name="name" placeholder="Name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control contact-input" name="phone" placeholder="Phone" required>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
-                                    <textarea class="form-control contact-input" rows="4" placeholder="Your Message"></textarea>
+                                        <input type="text" class="form-control contact-input" name="location" placeholder="Location" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control contact-input" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control contact-input" name="message" rows="4" placeholder="Your Message" required></textarea>
                                     </div>
                                     <div class="text-center">
-                                    <button type="submit" class="btn contact-btn px-5 py-2 fw-bold text-uppercase">Send Message</button>
+                                        <button type="submit" class="btn contact-btn px-5 py-2 fw-bold text-uppercase">Send Message</button>
+                                    </div>
+                                    <div id="questionFormMsg" class="mt-3 text-success fw-bold" style="display:none;">Thank you! Your message has been sent.</div>
+                                </form>
+                                <script>
+                                // Optional: Show a user-friendly message after submission (for AJAX or redirect)
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    var form = document.querySelector('form[action="https://formspree.io/f/xyzjwody"]');
+                                    if(form) {
+                                        form.addEventListener('submit', function() {
+                                            setTimeout(function() {
+                                                var msg = document.getElementById('questionFormMsg');
+                                                if(msg) msg.style.display = 'block';
+                                            }, 1000);
+                                        });
+                                    }
+                                });
+                                </script> -->
+                            
+                                <form id="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control mb-2 contact-input" name="user_name" placeholder="Your Name" required />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control mb-2 contact-input" name="user_phone" placeholder="Your Phone" required />
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control mb-2 contact-input" name="user_location" placeholder="Your Location" required />
+                                    <input type="email" class="form-control mb-2 contact-input" name="user_email" placeholder="Your Email" required />
+                                    <textarea class="form-control mb-2 contact-input" name="message" placeholder="Your Message" required></textarea>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn contact-btn px-5 py-2 fw-bold text-uppercase">Send</button>
                                     </div>
                                 </form>
                             </div>
@@ -456,6 +500,9 @@
             </div>
         </div>
     </footer>
+
+
+    
     <!-- *********************************************** /FOOTER *********************************************** -->
 
     <script>
@@ -479,6 +526,24 @@
                 aboutVideo.currentTime = 0;
             });
         }
+    });
+    </script>
+
+
+
+    <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
+        function () {
+            alert("Message sent successfully!");
+        },
+        function (error) {
+            alert("Failed to send message. Please try again.");
+            console.log("FAILED...", error);
+        }
+        );
     });
     </script>
 </body>
