@@ -15,12 +15,13 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
     (function () {
-        emailjs.init("YOUR_PUBLIC_KEY"); // replace with your EmailJS Public Key
+        emailjs.init("5kNvmg7qtsezSOIGh"); // replace with your EmailJS Public Key
     })();
     </script>
 </head>
@@ -535,9 +536,15 @@
     document.getElementById("contact-form").addEventListener("submit", function (e) {
         e.preventDefault();
 
-        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
+        emailjs.sendForm("service_fsil4wp", "template_e6br75r", this).then(
         function () {
-            alert("Message sent successfully!");
+            // Show SweetAlert on successful message send
+            swal({
+              icon: 'success',
+              title: 'Message sent successfully!',
+              buttons: false,
+              timer: 2000
+            });
         },
         function (error) {
             alert("Failed to send message. Please try again.");
